@@ -3,7 +3,7 @@ package com.alexandre.entites;
 public class MessageUtilisateur {
     public  Utilisateur util;
     public Message mess;
-    public  MessageUtilisateur(Utilisateur util,Message message){
+    public  MessageUtilisateur(Utilisateur util, Message message){
         this.util=util;
         this.mess=message;
     }

@@ -21,10 +21,11 @@ public class Message {
         this.texte = texte;
 
         this.utilisateur = utilisateur;
-        date_creation= new Date();
-        JOptionPane.showMessageDialog(null,titre+ " "+texte+"Date de création :" +getDate_creation()+"Utilisateur:"+
-         new Utilisateur("Jean","Dupont", CategorieUtilisateur.STANDARD));
+        date_creation = new Date();
+        JOptionPane.showMessageDialog(null, titre + " " + texte + "Date de création :" + getDate_creation() + "Utilisateur:" +
+                new Utilisateur("Jean", "Dupont", CategorieUtilisateur.STANDARD));
 
+        Forum forum = new Forum();
     }
 
     public String getDate_creation() {

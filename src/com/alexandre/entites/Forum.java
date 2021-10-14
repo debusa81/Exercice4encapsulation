@@ -7,7 +7,7 @@ public class Forum {
     public int nbr_message_now;
     MessageUtilisateur[] tableau  = new MessageUtilisateur[NBR_MESSAGES];
     public boolean ajouterUtilisateuMessage(Utilisateur utilisateur, MessageUtilisateur message){
-        MessageUtilisateur mess= new MessageUtilisateur(utilisateur,message);
+
         for (int i=0;i<NBR_MESSAGES;i++){
             tableau[i]=message;
         }

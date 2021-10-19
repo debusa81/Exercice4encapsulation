@@ -9,26 +9,18 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * Classe message
+ */
 public class Message {
+
+
     private String titre ;
     private String texte;
     private Date date_creation;
     private Utilisateur utilisateur;
-    public static final  Forum forum = new Forum();
-
-    public Message(String titre, String texte, Utilisateur utilisateur) {
-        this.titre = titre;
-        this.texte = texte;
-
-        this.utilisateur = utilisateur;
-        date_creation = new Date();
-        JOptionPane.showMessageDialog(null, titre + " " + texte + "Date de création :" + getDate_creation() + "Utilisateur:" +
-                new Utilisateur("Jean", "Dupont", CategorieUtilisateur.STANDARD));
-
-        Forum forum = new Forum();
-    }
-
-    public String getDate_creation() {
+    // ecriture des getter et des setters
+    String getDate_creation() {
         DateFormat df = DateFormat.getDateTimeInstance(DateFormat.FULL,DateFormat.FULL);
 
 
@@ -55,9 +47,25 @@ public class Message {
         this.titre = titre;
     }
 
+
     public Utilisateur getUtilisateur() {
         return utilisateur;
     }
+    //définition du constructeur de la classe
+    public Message(String titre, String texte, Utilisateur utilisateur) {
+        setTitre(titre);
+        setTexte(texte);
+
+        this.utilisateur = utilisateur;
+        date_creation = new Date();
+        JOptionPane.showMessageDialog(null,
+                titre + " " + texte + "Date de création :" + getDate_creation() + "Utilisateur:" +
+                new Utilisateur("Jean", "Dupont", CategorieUtilisateur.STANDARD));
+
+
+    }
+
+    //méthode tostring
 
     @Override
     public String toString() {

@@ -1,12 +1,17 @@
 package com.alexandre.entites;
 
+import com.alexandre.types.CategorieUtilisateur;
+
 public class MessageUtilisateur {
     public  Utilisateur util;
     public Message mess;
     public  MessageUtilisateur(Utilisateur util, Message message){
         this.util=util;
         this.mess=message;
+
     }
+
+
 
     public Utilisateur getUtil() {
         return util;
@@ -22,5 +27,13 @@ public class MessageUtilisateur {
 
     public void setMess(Message mess) {
         this.mess = mess;
+    }
+
+    @Override
+    public String toString() {
+        return
+                  util +
+                ", titre:" + mess +
+                '}';
     }
 }
